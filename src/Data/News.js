@@ -1,5 +1,5 @@
-import newspic from '../Assets/newsPic.png';
-import newspic2 from '../Assets/newsPic2.png';
+import newspic from '../assets/newsPic.png';
+import newspic2 from '../assets/newsPic2.png';
 
   const rightArrow = "\u{2192}";
 
