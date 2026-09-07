@@ -1,13 +1,11 @@
 // import img from "../assets/hero-image.jpg";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faShare} from "@fortawesome/free-solid-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Genres } from "../Data/Genres";
 import { News } from "../Data/News";
 import "../CSS/Home.css";
-// import Navbar from "./Navbar"; 
 
 const Home = ({ setPage }) => {
   useEffect(() => {

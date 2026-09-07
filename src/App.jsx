@@ -40,7 +40,14 @@ const App = () => {
   const [page, setPage] = useState("home");
 
   return (
-    <div>
+    <div
+      style={{
+        "--hero-image": `url("${import.meta.env.BASE_URL}heroPic.jpg")`,
+        "--philosophy-image": `url("${import.meta.env.BASE_URL}philopic.png")`,
+        "--about-image": `url("${import.meta.env.BASE_URL}aboutImg4.png")`,
+        "--genres-image": `url("${import.meta.env.BASE_URL}genrespic.jpg")`,
+      }}
+    >
       <NavBar page={page} setPage={setPage}></NavBar>
 
       {/* renderpage is called here to veiw each page content when clicked */}

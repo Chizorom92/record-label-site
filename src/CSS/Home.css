@@ -3,7 +3,7 @@
 
 
 .intro-section {
-  background-image: url(/heroPic.jpg);
+  background-image: var(--hero-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +221,7 @@ font-size: 15px;
  justify-content: center;
  text-align: left;
  padding: 20px;
- background-image: url(/philopic.png);
+ background-image: var(--philosophy-image);
  background-position: center;
  background-size: cover;
  background-repeat: no-repeat;

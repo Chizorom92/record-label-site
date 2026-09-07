@@ -1,8 +1,6 @@
-// import newspic from '../assets/newsPic.png';
-// import newspic2 from '/src/assets/newsPic2.png';
+
 
   const rightArrow = "\u{2192}";
-  
 
 
 export const News = [
@@ -54,7 +52,7 @@ export const News2 = [
    {
     id : 1,
     title : 'WHAT WE LOOK IN NEW ARTISTS',
-    img: '/newsPic.png',
+    img: `${import.meta.env.BASE_URL}newsPic.png`,
     nav: 'Read More',
     arrow: rightArrow,
     description: 'we are looking for artists',
@@ -67,7 +65,7 @@ export const News2 = [
   {
     id : 2,
     title : 'A&R SUBMISSION ARE NOW OPEN',
-    img: '/newspic2.png',
+    img: `${import.meta.env.BASE_URL}newspic2.png`,
     nav: 'Read More',
     arrow: rightArrow,
     description: 'Submit your music now!', 
