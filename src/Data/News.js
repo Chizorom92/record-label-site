@@ -52,7 +52,7 @@ export const News2 = [
    {
     id : 1,
     title : 'WHAT WE LOOK IN NEW ARTISTS',
-    img: `${import.meta.env.BASE_URL}newsPic.png`,
+    img: '/newsPic.png',
     nav: 'Read More',
     arrow: rightArrow,
     description: 'we are looking for artists',
@@ -65,7 +65,7 @@ export const News2 = [
   {
     id : 2,
     title : 'A&R SUBMISSION ARE NOW OPEN',
-    img: `${import.meta.env.BASE_URL}newspic2.png`,
+    img: '/newspic2.png',
     nav: 'Read More',
     arrow: rightArrow,
     description: 'Submit your music now!', 
