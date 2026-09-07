@@ -7,6 +7,8 @@ import { Genres } from "../Data/Genres";
 import { News } from "../Data/News";
 import "../CSS/Home.css";
 
+  import { Resend } from 'resend';
+
 const Home = ({ setPage }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,6 +17,18 @@ const Home = ({ setPage }) => {
   // const img = "../assets/hero-image.jpg";
   const rightArrow = "\u{2192}";
   // const share = "\u{f5B3}";
+
+
+
+
+const resend = new Resend('***REMOVED-RESEND-KEY***');
+
+resend.emails.send({
+  from: 'onboarding@resend.dev',
+  to: 'bmaurice367@gmail.com',
+  subject: 'Hello World',
+  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+});
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -9,19 +9,66 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+import SuccessModal from "../Components/SuccessModal";
 import "../CSS/Contact.css";
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const successModalContent = {
+    title: "Message sent",
+    message: "Thank you for reaching out. We have received your inquiry and will be in touch soon.",
+    buttonLabel: "CLOSE",
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResult("");
+
+    try {
+      const formData = new FormData(event.target);
+      formData.append("access_key", "8299c986-beb5-44f8-8a89-41224b98f004");
+      formData.append("subject", "New business inquiry - 0147 Records");
+      formData.append("from_name", "0147 Records website");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("");
+        setShowSuccessModal(true);
+        event.target.reset();
+      } else {
+        setResult("Error. Please try again.");
+      }
+    } catch {
+      setResult("Error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <div className="contact">
+        {showSuccessModal && (
+          <SuccessModal
+            {...successModalContent}
+            onClose={() => setShowSuccessModal(false)}
+          />
+        )}
         <h4>CONTACT US</h4>
         <p>Let's connect. We'd love to hear from you.</p>
-
         <div className="contact-details">
           <div className="contact-detail">
             <span className="contact-icon">
@@ -80,14 +127,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
         <br /> <br /> <br />
-
         {/* Enquiry */}
-
         <div className="contact-inquiry">
           <h4>BUSINESS INQUIRY</h4>
-          <form action="#">
+          <form onSubmit={onSubmit}>
             <div className="contact-us">
               <div className="contact-name">
                 <label htmlFor="name">Name*</label>
@@ -111,7 +155,9 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "SENDING..." : result || "SEND MESSAGE"}
+            </button>
           </form>
         </div>
       </div>
