@@ -1,0 +1,258 @@
+.about {
+}
+
+.about-title {
+  font-size: 30px;
+  font-family: verdana;
+  font-weight: 800;
+  text-shadow: 0px 0px 3px;
+  text-align: left;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+#logo-red {
+  color: red;
+}
+
+.about-subtitle {
+  text-align: left;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  font-family: arial;
+  text-shadow: 0px 0px 2px;
+  font-weight: 600;
+}
+
+.about-text {
+  /* width: 80%; */
+  /* min-height: 20px; */
+  padding: 0px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  letter-spacing: 1px;
+  font-family: arial;
+  color: rgb(169, 142, 142);
+  background-image: url(../assets/aboutImg4.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80%;
+}
+
+.about-story {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-family: arial;
+  color: rgb(169, 142, 142);
+}
+
+#text-icon {
+  text-align: right;
+  margin-top: 50%;
+  padding: 10px 20px;
+}
+
+#text-i {
+  display: inline-block;
+  animation: spin-disk 40s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin-disk {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about-tag {
+  display: flex;
+  border: 2px solid rgb(48, 37, 37);
+  padding: 20px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.about-tags h3 {
+  text-align: left;
+  color: white;
+  font-size: 15px;
+  text-shadow: 0px 0px 2px;
+}
+
+.about-tags p {
+  font-size: 14px;
+  width: 90%;
+  text-align: left;
+  color: rgb(135, 135, 100);
+  font-family: arial;
+}
+
+.about-tags h1 {
+  font-size: 30px;
+  width: 100%;
+  color: red;
+  text-align: left;
+}
+
+.about-tags {
+  width: 40%;
+  border: 2px solid rgb(13, 11, 11);
+  padding: 10px;
+  box-shadow: 0px 0px 2px rgb(101, 66, 66);
+  border-radius: 2px;
+}
+
+.about-how {
+}
+
+.about-how-head {
+  text-align: left;
+  padding: 10px 100px;
+  font-weight: 800;
+  text-shadow: 0px 0px 2px;
+  color: white;
+}
+
+.about-head-text {
+  text-align: left;
+  padding: 10px 100px;
+  width: 40%;
+  margin-top: -20px;
+  font-family: arial;
+}
+
+.about-list {
+  text-align: left;
+  padding: 10px 120px;
+  font-family: arial;
+}
+
+.about-list li::marker {
+  color: red;
+}
+
+
+
+
+.about-label{
+border: 2px solid rgb(116, 0, 0);
+padding: 10px;
+width: 73%;
+margin: auto;
+border-radius: 2px;
+
+}
+
+.about-label-head{
+text-align: left;
+padding: 10px 20px;
+font-family: sans-serif;
+font-weight: 700;
+text-shadow: 0px 0px 2px;
+}
+
+.about-label-text{
+  text-align: left;
+  padding: 10px 20px;
+  color: rgb(97, 110, 122);
+  font-family: arial;
+  margin-top: -30px;
+  width: 70%;
+
+
+}
+
+
+
+
+.about-genre{
+
+}
+
+.about-genre-list{
+  text-align: left;
+  padding: 10px 120px;
+  font-family: arial;
+  background-image: url(../assets//genrespic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  margin: auto;
+  line-height: 300%;
+}
+
+.about-genre-list li::marker{
+  color: red;
+}
+
+.about-genrehead{
+text-align: left;
+  padding: 10px 100px;
+  font-weight: 800;
+  text-shadow: 0px 0px 2px;
+  color: white;
+}
+
+
+.genre-icon{
+  margin-top: 0px;
+  text-align: center;
+}
+
+.about-future{
+  background-color: rgb(20, 16, 16);
+  padding: 30px;
+}
+
+.about-future h2{
+text-align: left;
+padding: 10px 100px;
+font-family: sans-serif;
+font-weight: 700;
+text-shadow: 0px 0px 2px;
+}
+
+
+.about-future p{
+text-align: left;
+padding: 10px 100px;
+font-family: arial;
+}
+
+.hr{
+width: 15%;
+
+}
+
+.future-btn{
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.future-btn:hover{
+  background-color: rgb(65, 12, 12);
+  color: white;
+  transition: 0.5s ease-in-out;
+}

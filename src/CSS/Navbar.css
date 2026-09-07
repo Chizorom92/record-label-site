@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* background: #1a1208; */
+
+  background-color: rgb(19, 1, 1);
+}
+
+/* duplicate logo style from footer */
+
+.navbar-logo{
+display: flex;
+text-align: left;
+align-items: center;
+padding:  10px 30px;
+}
+
+.footer-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+
+}
+
+#logo{
+  font-size: 10px;
+}
+
+#rec{
+margin-top: -60px;
+font-size: 10px;
+letter-spacing: 5px;
+
+}
+
+.footer-title h5{
+font-size: 35px;
+font-weight: 800;
+text-shadow: 0px 0px 2px;
+}
+
+/*  end here */
+/* 
+.navbar-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+} */
+
+.navbar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 80%;
+  font-family: sans-serif;
+  gap: 5%;
+  cursor: pointer;
+  width: 40%;
+}
+
+.navbar-link h5:hover {
+  border-bottom: 4px solid red;
+  transform: translateY(-3px);
+  transition: 0.5s ease-in-out;
+}
+
+.navbar button {
+  background-color: red;
+  padding: 10px;
+  border: none;
+  font-weight: 800;
+  font-size: 10px;
+  font-family:  Arial;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar button:hover {
+  background-color: rgb(65, 12, 12);
+  color: white;
+  transition: 0.5s ease-in-out;
+}

@@ -1,0 +1,198 @@
+.contact {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 100px;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.contact h4 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: -30px;
+}
+
+.contact p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* details card */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  max-width: 740px;
+  margin-top: 32px;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 32px;
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #262626;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-detail:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e02020;
+  font-size: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact-info a,
+.contact-info span:not(.contact-label) {
+  color: #999;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #e02020;
+}
+
+.contact-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.contact-social a {
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.contact-social a:hover {
+  color: #e02020;
+}
+
+/* business inquiry card */
+.contact-inquiry {
+  background-color: #0d0d0d;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  max-width: 740px;
+  margin-top: 32px;
+  padding: 32px 32px 40px;
+  margin: auto;
+}
+
+.contact-inquiry h4 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.contact-inquiry label {
+  display: inline-block;
+  font-size: 13px;
+  color: #ddd;
+  margin-bottom: 6px;
+}
+
+.contact-inquiry input[type="text"],
+.contact-inquiry input[type="email"],
+.contact-inquiry textarea {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-inquiry input:focus,
+.contact-inquiry textarea:focus {
+  border-color: #e02020;
+}
+
+.contact-inquiry textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.contact-name,
+.contact-email-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-inquiry button {
+  width: 100%;
+  background-color: #e02020;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 16px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-inquiry button:hover {
+  background-color: #c81a1a;
+}
+
+@media (max-width: 600px) {
+  .contact-us {
+    grid-template-columns: 1fr;
+  }
+
+  .contact > h4 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,167 @@
+.footer{
+display: flex;
+justify-content: center;
+/* align-items: center; */
+margin: auto;
+gap: 10%;
+}
+
+.footer-start{
+margin-top: -30px;
+}
+
+.footer-logo{
+display: flex;
+text-align: left;
+align-items: center;
+padding:  10px 30px;
+}
+
+.footer-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+
+}
+
+#logo{
+  font-size: 10px;
+}
+
+#rec{
+margin-top: -60px;
+font-size: 10px;
+letter-spacing: 5px;
+
+}
+
+.footer-title h5{
+font-size: 35px;
+font-weight: 800;
+text-shadow: 0px 0px 2px;
+}
+
+.footer-description{
+text-align: left;
+padding: 10px 30px;
+color: rgb(139, 130, 130);
+  font-size: 13px;
+  text-shadow: 0px 0px 2px;
+  
+}
+
+
+
+
+/* footer nav */
+
+
+.footer-nav h5{
+  text-align: left;
+}
+
+.footer-nav-link p{
+  margin-top: -2px;
+  text-align: left;
+  /* padding: 10px 30px; */
+color: rgb(139, 130, 130);
+  font-size: 13px;
+  text-shadow: 0px 0px 2px;
+  cursor: pointer;
+}
+
+
+.footer-nav-link{
+  width: 200%;
+}
+
+.footer-nav-link p:hover{
+  color: rgb(74, 69, 63);
+}
+
+
+/* legal */
+
+
+.footer-legal{
+  text-align: left;
+}
+
+.footer-legal-link{
+
+  width: 120%;
+}
+
+
+
+.footer-legal-link p{
+margin-top: -2px;
+  text-align: left;
+  /* padding: 10px 30px; */
+color: rgb(139, 130, 130);
+  font-size: 13px;
+  text-shadow: 0px 0px 2px;
+  cursor: pointer;
+}
+
+.footer-legal-link p:hover{
+  color: rgb(74, 69, 63);
+}
+
+
+/* connect */
+
+.footer-connect h5{
+  text-align: left;
+}
+
+.footer-connect{
+margin-right: 5%;
+}
+
+.footer-connect-list{
+  margin-bottom: 10px;
+}
+
+.footer-connect-list p{
+margin-top: -2px;
+  text-align: left;
+  /* padding: 10px 30px; */
+color: rgb(139, 130, 130);
+  font-size: 13px;
+  text-shadow: 0px 0px 2px;
+  cursor: pointer;
+
+}
+
+.footer-connect p:hover{
+  color: rgb(74, 69, 63);
+}
+
+#mail, #tel{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* socials */
+
+.footer-socials{
+  text-align: left;
+  display: inline;
+  gap: 10px;
+}
+
+.footer-socials a{
+  padding: 4px ;
+  color: inherit;
+  color: white;
+  
+}
+
+.copy{
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(50, 38, 38);
+  font-size: 17px;
+}
