@@ -21,8 +21,8 @@ padding:  10px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
-
+  align-items: center;
+  cursor: pointer;
 }
 
 #logo{

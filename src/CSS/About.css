@@ -36,7 +36,7 @@
   letter-spacing: 1px;
   font-family: arial;
   color: rgb(169, 142, 142);
-  background-image: url(../assets/aboutImg4.png);
+  background-image: url(/aboutImg4.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -188,7 +188,7 @@ text-shadow: 0px 0px 2px;
   text-align: left;
   padding: 10px 120px;
   font-family: arial;
-  background-image: url(../assets//genrespic.jpg);
+  background-image: url(/genrespic.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
