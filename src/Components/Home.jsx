@@ -7,7 +7,7 @@ import { Genres } from "../Data/Genres";
 import { News } from "../Data/News";
 import "../CSS/Home.css";
 
-  import { Resend } from 'resend';
+
 
 const Home = ({ setPage }) => {
   useEffect(() => {
@@ -19,16 +19,6 @@ const Home = ({ setPage }) => {
   // const share = "\u{f5B3}";
 
 
-
-
-const resend = new Resend('***REMOVED-RESEND-KEY***');
-
-resend.emails.send({
-  from: 'onboarding@resend.dev',
-  to: 'bmaurice367@gmail.com',
-  subject: 'Hello World',
-  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-});
 
   return (
     <>
