@@ -19,7 +19,8 @@ const Contact = () => {
 
   const successModalContent = {
     title: "Message sent",
-    message: "Thank you for reaching out. We have received your inquiry and will be in touch soon.",
+    message:
+      "Thank you for reaching out. We have received your inquiry and will be in touch soon.",
     buttonLabel: "CLOSE",
   };
 
@@ -36,7 +37,7 @@ const Contact = () => {
       const formData = new FormData(event.target);
       formData.append("access_key", "8299c986-beb5-44f8-8a89-41224b98f004");
       formData.append("subject", "New business inquiry - 0147 Records");
-      formData.append("from_name", "0147 Records website");
+      formData.append("from_name", "0147 Records");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",

@@ -37,6 +37,7 @@ const Footer = ({ setPage }) => {
         </div>
 
         
+        <div className="footer-middle">
           
         <div className="footer-nav">
           <h5>NAVIGATION</h5>
@@ -106,6 +107,7 @@ const Footer = ({ setPage }) => {
             </a>
           </div>
         </div>
+      </div>
       </div>
 
       <p className="copy"> {copyRight} 2026 0147 Records. All Rights Reserved.</p>

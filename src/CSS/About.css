@@ -1,6 +1,3 @@
-.about {
-}
-
 .about-title {
   font-size: 30px;
   font-family: verdana;
@@ -116,9 +113,9 @@
   box-shadow: 0px 0px 2px rgb(101, 66, 66);
   border-radius: 2px;
 }
-
+/* 
 .about-how {
-}
+} */
 
 .about-how-head {
   text-align: left;
@@ -146,45 +143,32 @@
   color: red;
 }
 
-
-
-
-.about-label{
-border: 2px solid rgb(116, 0, 0);
-padding: 10px;
-width: 73%;
-margin: auto;
-border-radius: 2px;
-
+.about-label {
+  border: 2px solid rgb(116, 0, 0);
+  padding: 10px;
+  width: 73%;
+  margin: auto;
+  border-radius: 2px;
 }
 
-.about-label-head{
-text-align: left;
-padding: 10px 20px;
-font-family: sans-serif;
-font-weight: 700;
-text-shadow: 0px 0px 2px;
+.about-label-head {
+  text-align: left;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 0px 2px;
 }
 
-.about-label-text{
+.about-label-text {
   text-align: left;
   padding: 10px 20px;
   color: rgb(97, 110, 122);
   font-family: arial;
   margin-top: -30px;
   width: 70%;
-
-
 }
 
-
-
-
-.about-genre{
-
-}
-
-.about-genre-list{
+.about-genre-list {
   text-align: left;
   padding: 10px 120px;
   font-family: arial;
@@ -197,50 +181,47 @@ text-shadow: 0px 0px 2px;
   line-height: 300%;
 }
 
-.about-genre-list li::marker{
+.about-genre-list li::marker {
   color: red;
 }
 
-.about-genrehead{
-text-align: left;
+.about-genrehead {
+  text-align: left;
   padding: 10px 100px;
   font-weight: 800;
   text-shadow: 0px 0px 2px;
   color: white;
 }
 
-
-.genre-icon{
+.genre-icon {
   margin-top: 0px;
   text-align: center;
 }
 
-.about-future{
+.about-future {
   background-color: rgb(20, 16, 16);
   padding: 30px;
 }
 
-.about-future h2{
-text-align: left;
-padding: 10px 100px;
-font-family: sans-serif;
-font-weight: 700;
-text-shadow: 0px 0px 2px;
+.about-future h2 {
+  text-align: left;
+  padding: 10px 100px;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 0px 2px;
 }
 
-
-.about-future p{
-text-align: left;
-padding: 10px 100px;
-font-family: arial;
+.about-future p {
+  text-align: left;
+  padding: 10px 100px;
+  font-family: arial;
 }
 
-.hr{
-width: 15%;
-
+.hr {
+  width: 15%;
 }
 
-.future-btn{
+.future-btn {
   width: 20%;
   text-align: center;
   padding: 10px;
@@ -251,8 +232,161 @@ width: 15%;
   cursor: pointer;
 }
 
-.future-btn:hover{
+.future-btn:hover {
   background-color: rgb(65, 12, 12);
   color: white;
   transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .about-title,
+  .about-subtitle {
+    padding-inline: 24px;
+  }
+
+  .about-story,
+  .about-text,
+  .about-tag,
+  .about-label {
+    width: calc(100% - 48px);
+  }
+
+  .about-tag {
+    gap: 16px;
+  }
+
+  .about-tags {
+    width: 33.333%;
+  }
+
+  .about-how-head,
+  .about-genrehead,
+  .about-future h2 {
+    padding-inline: 48px;
+  }
+
+  .about-head-text,
+  .about-future p {
+    width: auto;
+    padding-inline: 48px;
+  }
+
+  .about-list {
+    padding-inline: 64px;
+  }
+
+  .about-genre-list {
+    width: calc(100% - 96px);
+    padding-inline: 64px;
+  }
+
+  .future-btn {
+    width: auto;
+    margin-inline: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    padding: 20px 16px 8px;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .about-subtitle,
+  .about-story {
+    padding-inline: 16px;
+  }
+
+  .about-story,
+  .about-text,
+  .about-tag,
+  .about-label {
+    width: calc(100% - 32px);
+  }
+
+  .about-text {
+    min-height: 220px;
+  }
+
+  #text-icon {
+    margin-top: 90px;
+  }
+
+  .about-tag {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .about-tags {
+    width: 100%;
+  }
+
+  .about-how-head,
+  .about-genrehead,
+  .about-future h2 {
+    padding-inline: 20px;
+  }
+
+  .about-head-text,
+  .about-future p {
+    width: auto;
+    padding-inline: 20px;
+  }
+
+  .about-list {
+    padding-inline: 36px;
+  }
+
+  .about-label-text {
+    width: auto;
+  }
+
+  .about-genre-list {
+    width: calc(100% - 40px);
+    padding-inline: 36px;
+    line-height: 2.4;
+  }
+
+  .about-future {
+    padding: 24px 0;
+  }
+
+  .future-btn {
+    width: calc(100% - 40px);
+    margin-inline: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-subtitle,
+  .about-story,
+  .about-label-text,
+  .about-head-text,
+  .about-future p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-text {
+    min-height: 180px;
+  }
+
+  #text-icon {
+    margin-top: 60px;
+    padding-inline: 10px;
+  }
+
+  .about-genre-list {
+    width: calc(100% - 32px);
+    padding-inline: 28px;
+  }
+
+  .about-future h2 {
+    font-size: 1.35rem;
+  }
 }

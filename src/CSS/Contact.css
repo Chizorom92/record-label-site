@@ -26,17 +26,20 @@
   display: flex;
   flex-direction: column;
   max-width: 740px;
-  margin-top: 32px;
+  width: 100%;
+  margin: 32px auto 0;
   border: 1px solid #262626;
   border-radius: 4px;
   overflow: hidden;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .contact-detail {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
   padding: 20px 32px;
   background-color: #0d0d0d;
   border-bottom: 1px solid #262626;
@@ -109,6 +112,7 @@
   border: 1px solid #262626;
   border-radius: 4px;
   max-width: 740px;
+  width: 100%;
   margin-top: 32px;
   padding: 32px 32px 40px;
   margin: auto;
@@ -187,12 +191,89 @@
   background-color: #c81a1a;
 }
 
+@media (max-width: 1024px) {
+  .contact {
+    padding-inline: 24px;
+  }
+
+  .contact > h4 {
+    font-size: clamp(2rem, 5vw, 2.625rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 16px 72px;
+  }
+
+  .contact > h4 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-details {
+    margin-top: 24px;
+  }
+
+  .contact-detail {
+    padding: 18px 20px;
+  }
+
+  .contact-inquiry {
+    margin-top: 24px;
+    padding: 24px 20px 32px;
+  }
+
+  .contact-inquiry input[type="text"],
+  .contact-inquiry input[type="email"],
+  .contact-inquiry textarea {
+    font-size: 16px;
+  }
+
+  .contact-inquiry button {
+    min-height: 48px;
+  }
+}
+
 @media (max-width: 600px) {
   .contact-us {
     grid-template-columns: 1fr;
   }
 
+  .contact-social {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding-inline: 12px;
+  }
+
   .contact > h4 {
-    font-size: 32px;
+    font-size: 1.75rem;
+  }
+
+  .contact > p {
+    font-size: 13px;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .contact-inquiry {
+    padding: 20px 16px 28px;
+  }
+
+  .contact-inquiry h4 {
+    font-size: 14px;
+  }
+
+  .contact-info a,
+  .contact-info span:not(.contact-label) {
+    overflow-wrap: anywhere;
   }
 }

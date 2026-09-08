@@ -28,6 +28,7 @@
   border: 1px solid #262626;
   border-radius: 4px;
   max-width: 740px;
+  width: 100%;
   margin-top: 32px;
   padding: 32px 32px 40px;
   margin: auto;
@@ -164,10 +165,82 @@
   margin-top: 20px;
 }
 
+@media (max-width: 1024px) {
+  .submit {
+    padding-inline: 24px;
+  }
+
+  .submit > h3 {
+    font-size: clamp(2rem, 5vw, 2.625rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .submit {
+    padding: 40px 16px 72px;
+  }
+
+  .submit > h3 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .submit-form {
+    margin-top: 24px;
+    padding: 24px 20px 32px;
+  }
+
+  .submit-form h5 {
+    line-height: 1.35;
+  }
+
+  .submit-form input[type="text"],
+  .submit-form input[type="email"],
+  .submit-form select,
+  .submit-form textarea {
+    font-size: 16px;
+  }
+
+  .submit-form button {
+    min-height: 48px;
+  }
+}
+
 @media (max-width: 600px) {
   .submit-names,
   .submit-origin,
   .submitlinks {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit {
+    padding-inline: 12px;
+  }
+
+  .submit > h3 {
+    font-size: 1.75rem;
+  }
+
+  .submit > p {
+    font-size: 13px;
+  }
+
+  .submit-form {
+    padding: 20px 16px 28px;
+  }
+
+  .submit-form h5 {
+    font-size: 14px;
+  }
+
+  .submit-form label {
+    line-height: 1.4;
+  }
+
+  .submit-form input[type="checkbox"] + label {
+    display: inline;
   }
 }

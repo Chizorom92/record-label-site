@@ -12,8 +12,8 @@ const Submit = () => {
   const successModalContent = {
     title: "Submission received",
     message:
-      "Thank you for sharing your music. Our team will review your submission and get back to you.",
-    buttonLabel: "CLOSE",
+      "Thank you for sharing your music. Our team will review your music and get back to you if there's a match.",
+    buttonLabel: "CLOSE" ,
   };
 
   const onSubmit = async (event) => {
@@ -25,7 +25,7 @@ const Submit = () => {
       const formData = new FormData(event.target);
       formData.append("access_key", "8299c986-beb5-44f8-8a89-41224b98f004");
       formData.append("subject", "New artist submission - 0147 Records");
-      formData.append("from_name", "0147 Records website");
+      formData.append("from_name", "0147 Records ");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -66,7 +66,7 @@ const Submit = () => {
             onClose={() => setShowSuccessModal(false)}
           />
         )}
-        
+
         <h3>ARTIST SUBMISSIONS</h3>
         <p>We're always looking for bright talent.</p>
         <p>Fill out the form below to submit your music.</p>

@@ -20,6 +20,7 @@ const Home = ({ setPage }) => {
 
 
 
+
   return (
     <>
       <main className="renderPage">
