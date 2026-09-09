@@ -1,50 +1,67 @@
 .develop {
-  background-color: #000;
+  background:
+    radial-gradient(circle at top, rgba(255, 0, 0, 0.14), transparent 28%),
+    #050505;
   color: #fff;
-  padding: 60px 20px 100px;
+  padding: 80px 20px 110px;
   min-height: 100vh;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .develop h3 {
-  font-size: 42px;
+  font-size: clamp(2.1rem, 3vw, 3.1rem);
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  margin-top: -40px;
-  text-shadow: 0px 0px 2px;
+  margin: 0 auto 18px;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
 }
 
 .develop p {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 500px;
+  color: #b7b7b7;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 620px;
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .develop-tools {
   display: flex;
   flex-direction: column;
-  max-width: 740px;
-  margin-top: 32px;
-  border: 1px solid #262626;
-  border-radius: 4px;
+  width: min(100%, 740px);
+  margin: 40px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
   overflow: hidden;
-  margin: auto;
+  background: rgba(14, 14, 14, 0.9);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
 .develop-artist {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  padding: 28px 32px;
-  background-color: #0d0d0d;
-  border-bottom: 1px solid #262626;
-  margin: auto;
+  padding: 28px 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.96),
+    rgba(9, 9, 9, 0.96)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.develop-artist:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.96),
+    rgba(12, 12, 12, 0.96)
+  );
+  transform: translateY(-1px);
 }
 
 .develop-artist:last-child {
@@ -53,17 +70,20 @@
 
 .develop-artist > div:first-child {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #e02020;
+  background: rgba(224, 32, 32, 0.08);
+  border: 1px solid rgba(224, 32, 32, 0.22);
+  border-radius: 12px;
 }
 
 .develop-artist > div:first-child svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   stroke: #e02020;
   fill: none;
 }
@@ -71,17 +91,19 @@
 .develop-artist h5 {
   font-size: 17px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  margin: 4px 0 8px;
+  margin: 2px 0 8px;
+  color: #f5f5f5;
 }
 
 .develop-artist p {
-  color: #999;
+  color: #a9a9a9;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   max-width: 420px;
+  text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -90,26 +112,41 @@
   }
 
   .develop h3 {
-    font-size: clamp(2rem, 5vw, 2.625rem);
+    font-size: clamp(2rem, 5vw, 2.8rem);
   }
 
   .develop-tools {
     width: min(100%, 740px);
   }
+}
 
-  .develop-artist {
-    width: 100%;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .develop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 24px 90px;
+  }
+
+  .develop > p {
+    max-width: 540px;
+  }
+
+  .develop-tools {
+    margin: 32px auto 0;
   }
 }
 
 @media (max-width: 768px) {
   .develop {
-    padding: 40px 16px 72px;
+    padding: 54px 16px 80px;
   }
 
   .develop h3 {
     font-size: clamp(1.75rem, 8vw, 2.25rem);
     line-height: 1.15;
+    letter-spacing: 1px;
     overflow-wrap: anywhere;
   }
 
@@ -127,13 +164,13 @@
   }
 
   .develop-artist > div:first-child {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
 
   .develop-artist > div:first-child svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 
   .develop-artist h5 {
@@ -158,13 +195,13 @@
   }
 
   .develop-artist > div:first-child {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
 
   .develop-artist > div:first-child svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .develop-artist h5 {

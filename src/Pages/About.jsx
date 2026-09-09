@@ -19,10 +19,15 @@ const About = ({ setPage }) => {
 
         </p>
 
-         <p className="about-story">            0147 Record was created Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Qui distinctio reprehenderit labore consectetur
-            numquam, ab mollitia eos deserunt totam veritatis amet inventore
-            vitae nesciunt, corrupti obcaecati. Maxime, eum rerum!</p>
+         <p className="about-story">
+  0147 Records was created to give bold, talented artists a space to grow,
+  create, and connect with the world through authentic music. We started with
+  a love for culture, rhythm, and originality and a belief that real
+  artistry deserves real support. Our mission is simple: to build a label
+  where creativity is nurtured, stories are amplified, and great music finds
+  its people.
+</p>
+
 
           <div className="about-text">
 
@@ -67,7 +72,7 @@ const About = ({ setPage }) => {
           <h3 className="about-how-head">HOW WE WORK</h3>
           <p className="about-head-text">
             We work clearly with a limited number of artists to create quality,
-            focus and empact.
+            focus and impact.
           </p>
 
           <ul className="about-list">
@@ -82,9 +87,8 @@ const About = ({ setPage }) => {
           <h3 className="about-label-head">WE ARE A NEW LABEL</h3>
 
           <p className="about-label-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-            eligendi atque error. Porro recusandae aliquid accusantium,
-            doloribus nesciunt architecto aperiam!
+            We are a new label, but we have a clear vision and a strong team. We are committed to helping our artists succeed and grow. We are looking for
+            talented artists who share our vision and values.
           </p>
         </div>
 
@@ -118,6 +122,7 @@ const About = ({ setPage }) => {
           </p>
           <button onClick={() => setPage("submit")} className="future-btn">
           Submit your music {rightArrow}{" "}
+          
         </button>
         </div>
 

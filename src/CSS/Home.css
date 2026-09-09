@@ -343,10 +343,10 @@ hr {
   }
 
   .sale-point {
-    width: 100%;
+    /* width: 100%; */
     padding: 24px 20px 10px;
     font-size: clamp(1.75rem, 8vw, 2.5rem);
-    gap: 4px;
+    /* gap: 4px; */
   }
 
   .record-feature,
@@ -438,7 +438,7 @@ hr {
 /* smaller screens */
 @media (max-width: 480px) {
   .record-feature {
-    font-size: 13px;
+    /* font-size: 13px; */
     background-color: rgba(0, 0, 0, 0.5);
   }
 

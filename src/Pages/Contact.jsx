@@ -17,6 +17,8 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
+  
+
   const successModalContent = {
     title: "Message sent",
     message:
@@ -38,6 +40,7 @@ const Contact = () => {
       formData.append("access_key", "8299c986-beb5-44f8-8a89-41224b98f004");
       formData.append("subject", "New business inquiry - 0147 Records");
       formData.append("from_name", "0147 Records");
+      formData.append("reply_to", formData.get("email"));
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",

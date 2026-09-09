@@ -1,41 +1,59 @@
 // import "./Nav.css";
 // import { useState } from "react";
-
+import { useState } from "react";
 import "../CSS/Navbar.css";
 
 const NavBar = ({ setPage }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
+
+  const handleNavClick = (page) => {
+    setPage(page);
+    closeMenu();
+  };
+
   return (
     <>
       <div className="navbar">
-        {/* <div className="navbar-head">
-          <span>🔴REC</span>
-          <div>
-          <span>0147</span> <br />
-          <span>Records</span>
-          </div>
-          
-        </div> */}
-
         <div className="footer-logo">
           <h5 id="logo">🔴REC</h5>
 
-          <div className="footer-title" onClick={() => setPage("home")}>
+          <div className="footer-title" onClick={() => handleNavClick("home")}>
             <h5>O147</h5>
             <p id="rec">RECORDS</p>
           </div>
         </div>
 
-        <div className="navbar-link">
-          <h5 onClick={() => setPage("home")}>HOME</h5>
-          <h5 onClick={() => setPage("about")}>ABOUT</h5>
-          <h5 onClick={() => setPage("a&r development")}>A&R / DEVELOPMENT</h5>
+        <button
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <h5 onClick={() => setPage("news")}>NEWS</h5>
-
-          <h5 onClick={() => setPage("contact")}>CONTACT</h5>
+        <div className={`navbar-link ${isOpen ? "active" : ""}`}>
+          <h5 onClick={() => handleNavClick("home")}>HOME</h5>
+          <h5 onClick={() => handleNavClick("about")}>ABOUT</h5>
+          <h5 onClick={() => handleNavClick("a&r development")}>
+            A&R / DEVELOPMENT
+          </h5>
+          <h5 onClick={() => handleNavClick("news")}>NEWS</h5>
+          <h5 onClick={() => handleNavClick("contact")}>CONTACT</h5>
         </div>
 
-        <button onClick={() => setPage("submit")}>SUBMIT YOUR MUSIC</button>
+        <button
+          className="submit-button"
+          onClick={() => handleNavClick("submit")}
+          type="button"
+        >
+          SUBMIT YOUR MUSIC
+        </button>
       </div>
     </>
   );
