@@ -14,6 +14,7 @@ import Terms from "./Pages/Terms";
 import SubmitTerms from "./Pages/SubmitTerms";
 import Cookies from "./Pages/Cookies";
 import MyPrivacy from "./Pages/MyPrivacy";
+import Top from "./Components/Top";
 
 const renderPage = (page, setPage) => {
   switch (page) {
@@ -63,6 +64,11 @@ const App = () => {
 
       {/* renderpage is called here to veiw each page content when clicked */}
       <div> {renderPage(page, setPage)}</div>
+
+      <Top></Top>
+
+
+      
 
       <Footer setPage={setPage}></Footer>
     </div>
