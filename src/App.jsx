@@ -36,7 +36,7 @@ const renderPage = (page, setPage) => {
       return <Contact setPage={setPage}></Contact>;
 
     case "privacy":
-      return <Privacy setPage={setPage}></Privacy>;
+      return <Privacy></Privacy>;
 
     case "terms":
       return <Terms setPage={setPage}></Terms>;

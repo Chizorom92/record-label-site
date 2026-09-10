@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "../CSS/Privacy.css";
 
 
- const Privacy = ({ setPage }) => {
+ const Privacy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
