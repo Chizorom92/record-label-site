@@ -17,8 +17,6 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  
-
   const successModalContent = {
     title: "Message sent",
     message:
@@ -159,9 +157,20 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit" disabled={isSubmitting}>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="submit-btn"
+            >
               {isSubmitting ? "SENDING..." : result || "SEND MESSAGE"}
             </button>
+
+            <p className="form-disclaimer">
+              By submitting this form, you agree that 0147 Records may use the
+              information you provide to respond to your inquiry and communicate
+              with you regarding your request. See our Privacy Policy for more
+              information.
+            </p>
           </form>
         </div>
       </div>

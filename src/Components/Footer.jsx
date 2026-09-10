@@ -13,6 +13,10 @@ import "../CSS/Footer.css";
 const Footer = ({ setPage }) => {
   const FaX = "𝕏";
 
+  const handleNavClick = (page) => {
+    setPage(page);
+  }
+
   const copyRight = "\u{00A9}";
   return (
     <>
@@ -20,15 +24,29 @@ const Footer = ({ setPage }) => {
 
       <div className="footer">
         <div className="footer-start">
-          <div className="footer-logo">
-             <h5 id="logo">🔴REC</h5>
-
-             <div className="footer-title">
-                 <h5>O147</h5>
-              <p id="rec">RECORDS</p>
-             </div>
-
-          </div>
+          
+          <div
+        className="navbar-brand"
+        onClick={() => handleNavClick("home")}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            handleNavClick("home");
+          }
+        }}
+      >
+        <img
+          src="/logo.jpeg"
+          alt="0147 Records logo"
+          className="footer-logo-img"
+        />
+        <div className="navbar-brand-text">
+          <span className="brand-title">0147</span>
+          <span className="brand-subtitle">RECORDS</span>
+        </div>
+      </div>
           
 
           <div className="footer-description">
@@ -64,10 +82,10 @@ const Footer = ({ setPage }) => {
           <h5>LEGAL</h5>
 
           <div className="footer-legal-link">
-          <p>Privacy Policy</p>
-          <p>Terms & Condition</p>
-          <p >Artist Submision Terms</p>
-          <p>Cookies Policy</p>
+          <p onClick={() => setPage("privacy")}>Privacy Policy</p>
+          <p onClick={() => setPage("terms")}>Terms & Condition</p>
+          <p onClick={() => setPage("submitTerms")}>Artist Submission Terms</p>
+          <p onClick={() => setPage("cookies")}>Cookies Policy</p>
           </div>
          
         </div>

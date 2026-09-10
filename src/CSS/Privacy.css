@@ -1,0 +1,105 @@
+.privacy-page {
+          max-width: 980px;
+          margin: 0 auto;
+          padding: 48px 24px 72px;
+          color: #f4f4f4;
+          font-family: Arial, sans-serif;
+          line-height: 1.7;
+        }
+
+        .privacy-page h1,
+        .privacy-page h2,
+        .privacy-page h3 {
+          color: #ffffff;
+          margin: 0 0 16px;
+          text-align: left;
+        }
+
+        .privacy-page h1 {
+          font-size: clamp(2rem, 4vw, 3rem);
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .privacy-page .eyebrow {
+          color: #ff3b30;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          margin-bottom: 12px;
+        }
+
+        .intro {
+          font-size: 1.05rem;
+          color: #d7d7d7;
+          margin-bottom: 28px;
+          text-align: left;
+        }
+
+        .privacy-page .policy-card {
+          /* background: rgba(136, 23, 23, 0.02); */
+          background-color: #140101;
+          /* border: 1px solid rgba(120, 180, 29, 0.08); */
+          border: 1px solid rgb(64, 18, 4);
+          border-radius: 12px;
+          padding: 28px;
+          margin-bottom: 28px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .privacy-page p,
+        .privacy-page li {
+          color: #d9d9d9;
+          font-size: 0.98rem;
+        }
+
+        .privacy-page ul {
+          padding-left: 20px;
+          margin: 16px 0 0;
+        }
+
+        li{
+          
+          text-align: left;
+        }
+
+        .privacy-page a {
+          color: #ff5f57;
+          text-decoration: none;
+        }
+
+        .privacy-page .back-button {
+          display: inline-block;
+          background: #d91f1f;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          padding: 12px 18px;
+          font-weight: 700;
+          cursor: pointer;
+          margin-top: 20px;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+
+        .back-button:hover{
+          background-color: #340707;
+
+        }
+
+        .policy-card{
+          text-align: left;
+        }
+
+
+
+        @media (max-width: 640px) {
+          .privacy-page {
+            padding: 32px 18px 56px;
+          }
+
+          .privacy-page .policy-card {
+            padding: 20px 16px;
+          }
+        }

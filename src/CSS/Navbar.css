@@ -1,71 +1,97 @@
 .navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 12%;
+  justify-content: space-between;
+  gap: clamp(0.75rem, 2vw, 2rem);
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: rgb(19, 1, 1);
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 12px clamp(1rem, 2vw, 2rem);
+  box-sizing: border-box;
 }
 
-.navbar-logo {
+.ham-submit {
+  display: none;
+}
+
+.navbar-brand {
   display: flex;
-  text-align: left;
   align-items: center;
-  padding: 10px 30px;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+  cursor: pointer;
+  min-width: 0;
 }
 
-.footer-title {
+.navbar-logo-img {
+  width: clamp(70px, 4vw, 68px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-brand-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  line-height: 0.9;
+  color: white;
 }
 
-#logo {
-  font-size: 10px;
-}
-
-#rec {
-  margin-top: -60px;
-  font-size: 10px;
-  letter-spacing: 5px;
-}
-
-.footer-title h5 {
-  font-size: 35px;
+.brand-title {
+  font-size: clamp(1.3rem, 2vw, 2rem);
   font-weight: 800;
-  text-shadow: 0px 0px 2px;
+  color: rgb(169, 175, 181);
+  letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+  font-size: 0.62rem;
+  letter-spacing: 0.45rem;
+  font-weight: 700;
 }
 
 .navbar-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
   color: white;
-  font-size: 80%;
   font-family: sans-serif;
-  gap: 5%;
+  gap: clamp(0.75rem, 1vw, 1.5rem);
   cursor: pointer;
-  width: 40%;
+}
+
+.navbar-link h5 {
+  margin: 0;
+  font-size: clamp(0.68rem, 0.85vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .navbar-link h5:hover {
   border-bottom: 4px solid red;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   transition: 0.5s ease-in-out;
 }
 
 .navbar button {
   background-color: red;
-  padding: 10px;
+  padding: 10px 14px;
   border: none;
   font-weight: 800;
   font-size: 10px;
   font-family: Arial;
   cursor: pointer;
   border-radius: 5px;
+  color: white;
 }
 
 .navbar button:hover {
@@ -74,7 +100,11 @@
   transition: 0.5s ease-in-out;
 }
 
-/* hamburger */
+.submit-button {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -111,19 +141,45 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-
-
-/* for mobile screens */
 @media (max-width: 900px) {
   .navbar {
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0;
+    row-gap: 12px;
     padding: 12px 18px;
+  }
+
+  .navbar-brand {
+    order: 1;
+    flex: 1 1 auto;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+    background: transparent;
+  }
+
+  .navbar-link.active .ham-submit {
+    display: block;
+    width: 100%;
+    background-color: red;
+    border: none;
+    box-shadow: 0px 0px 1px rgb(10, 1, 1);
+    padding: 10px 12px;
+    font-weight: 800;
+    font-size: 10px;
+    font-family: Arial;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8px;
+    text-align: center;
   }
 
   .navbar-link {
     display: none;
+    order: 3;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -135,23 +191,19 @@
   .navbar-link.active {
     display: flex;
     font-size: 20px;
-    line-height: 2px;
-    text-align: center;
-    /* width: 120%; */
-    
+    line-height: 1.4;
+    width: 100%;
+    text-align: left;
   }
 
- 
+  .navbar-link h5 {
+    white-space: normal;
+  }
 
   .navbar-link h5:hover {
-  border-bottom: none;
-  transform: translateY(-1px);
-  transition: 0.5s ease-in-out;
-}
-
-  .hamburger {
-    display: flex;
-    margin-left: auto;
+    border-bottom: none;
+    transform: translateY(-1px);
+    transition: 0.5s ease-in-out;
   }
 
   .submit-button {

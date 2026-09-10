@@ -11,16 +11,23 @@
   box-sizing: border-box;
 }
 
-.footer-start {
+/* .footer-start {
   flex: 1 1 28%;
   min-width: 220px;
-}
+} */
 
-.footer-logo {
+/* .footer-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+} */
+
+.footer-logo-img {
+  width: clamp(130px, 4vw, 68px);
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-title {
@@ -148,6 +155,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  /* width: 110%; */
+  
 }
 
 .footer-socials a {

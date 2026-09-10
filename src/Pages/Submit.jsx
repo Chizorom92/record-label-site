@@ -199,6 +199,8 @@ const Submit = () => {
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "SENDING..." : result || "SUBMIT"}
             </button>
+
+            <p className="submit-disclaimer">By submitting your music, you confirm that you have the necessary rights to submit the material. Your information and submission may be reviewed by 0147 Records for A&R and potential music-related opportunities. See our Privacy Policy for more information.</p>
           </form>
         </div>
       </div>

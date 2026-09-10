@@ -5,6 +5,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Genres } from "../Data/Genres";
 import { News } from "../Data/News";
+// import logo from "../";
 import "../CSS/Home.css";
 
 
@@ -94,7 +95,7 @@ const Home = ({ setPage }) => {
           <div className="featured-genre">
             <h4 className="featured-title">FEATURED GENRES</h4>
             <span className="featured-view">
-              VIEW ALL <FontAwesomeIcon icon={faChevronDown} />
+              {/* VIEW ALL <FontAwesomeIcon icon={faChevronDown} /> */}
             </span>
           </div>
 

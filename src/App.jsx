@@ -10,6 +10,10 @@ import News from "./Pages/News";
 import Contact from "./Pages/Contact";
 import NavBar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Privacy from "./Pages/Privacy";
+import Terms from "./Pages/Terms";
+import SubmitTerms from "./Pages/SubmitTerms";
+import Cookies from "./Pages/Cookies";
 
 const renderPage = (page, setPage) => {
   switch (page) {
@@ -30,6 +34,18 @@ const renderPage = (page, setPage) => {
 
     case "contact":
       return <Contact setPage={setPage}></Contact>;
+
+    case "privacy":
+      return <Privacy setPage={setPage}></Privacy>;
+
+    case "terms":
+      return <Terms setPage={setPage}></Terms>;
+
+    case "submitTerms":
+      return <SubmitTerms setPage={setPage}></SubmitTerms>;
+
+    case "cookies":
+      return <Cookies setPage={setPage}></Cookies>;
 
     default:
       return <Home setPage={setPage} />;
